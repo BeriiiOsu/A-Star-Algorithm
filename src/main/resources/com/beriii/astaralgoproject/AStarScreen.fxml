@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.beriii.astaralgoproject.AStar.AStarController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <Pane fx:id="container" layoutX="136.0" layoutY="13.0" prefHeight="475.0" prefWidth="550.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;" />
+            <Label layoutX="15.0" layoutY="15.0" text="Enter a node:">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nodeTxt" layoutX="15.0" layoutY="37.0" prefHeight="25.0" prefWidth="111.0" promptText="Name" />
+            <Line endX="-1.0" layoutX="121.0" layoutY="108.0" startX="-100.0" />
+            <Label layoutX="15.0" layoutY="119.0" text="Add edge:">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fromTxt" layoutX="15.0" layoutY="137.0" prefHeight="25.0" prefWidth="111.0" promptText="Node 1" />
+            <TextField fx:id="toTxt" layoutX="15.0" layoutY="207.0" prefHeight="25.0" prefWidth="111.0" promptText="Node 2" />
+            <TextField fx:id="weightTxt" layoutX="15.0" layoutY="172.0" prefHeight="25.0" prefWidth="111.0" promptText="Weight/Distance" />
+            <Line endX="-1.0" layoutX="121.0" layoutY="279.0" startX="-100.0" />
+            <Label layoutX="15.0" layoutY="290.0" text="Find path:">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+            </Label>
+            <ToggleButton accessibleRole="BUTTON" layoutX="25.0" layoutY="72.0" mnemonicParsing="false" onAction="#addNode" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-color: black;" text="Add">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton accessibleRole="BUTTON" layoutX="25.0" layoutY="242.0" mnemonicParsing="false" onAction="#addEdge" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-color: black;" text="Add">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </ToggleButton>
+            <TextField fx:id="startTxt" layoutX="15.0" layoutY="307.0" prefHeight="25.0" prefWidth="111.0" promptText="Start" />
+            <TextField fx:id="endTxt" layoutX="15.0" layoutY="342.0" prefHeight="25.0" prefWidth="111.0" promptText="End" />
+            <ToggleButton accessibleRole="BUTTON" layoutX="25.0" layoutY="377.0" mnemonicParsing="false" onAction="#findPath" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-color: black;" text="Find">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton accessibleRole="BUTTON" layoutX="26.0" layoutY="415.0" mnemonicParsing="false" onAction="#clearAllBtn" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-color: black;" text="Clear All">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
